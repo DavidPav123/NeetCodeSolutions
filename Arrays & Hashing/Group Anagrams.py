@@ -14,7 +14,7 @@ class Solution:
             if string_dict not in anagram_dicts:
                 new_list = []
                 new_list.append(strings)
-                anagram_dicts.append(strings)
+                anagram_dicts.append(string_dict)
                 string_final.append(new_list)
             else:
                 nested_list = string_final[anagram_dicts.index(string_dict)]
