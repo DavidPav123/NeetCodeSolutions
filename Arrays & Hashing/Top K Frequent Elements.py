@@ -1,7 +1,6 @@
 class Solution:
     def topKFrequent(self, nums: List[int], k: int) -> List[int]:
         number_count = dict()
-        output_nums = []
         tracker = []
 
         for number in nums:
@@ -18,12 +17,15 @@ class Solution:
         for i in range(k):
             for key in number_count:
                 if number_count[key] == tracker[0]: 
-                    output_nums.append(key)
+                    tracker.append(key)
                     number_count.pop(key)
                     tracker.pop(0)
                     break
+                    
+        while len(tracker) > k:
+            tracker.pop(0)
 
-        return output_nums
+        return tracker
 
 
 
