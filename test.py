@@ -1,5 +1,4 @@
-test = {1: 3, 3: 5, 2: 1}
+nlist = [[1,2,3,], [4,5,6]]
 
-dict(sorted(test.items(), key=lambda item: item[1]))
-
-print(test)
+for i in range(len(nlist)):
+    print(nlist[i])
